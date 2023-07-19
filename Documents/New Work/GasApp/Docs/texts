@@ -1,0 +1,32 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const HomePage = () => {
+  const [heroData, setHeroData] = useState(null);
+
+  useEffect(() => {
+    // Fetch the data for the Hero section
+    axios.get('/api/home/hero')
+      .then(response => {
+        setHeroData(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
+  return (
+    <div>
+      {heroData && (
+        <section className="hero">
+          <h1>{heroData.title}</h1>
+          <p>{heroData.subtitle}</p>
+          <img src={heroData.backgroundImage} alt="Hero Background" />
+        </section>
+      )}
+    </div>
+  );
+};
+
+export default HomePage;
+

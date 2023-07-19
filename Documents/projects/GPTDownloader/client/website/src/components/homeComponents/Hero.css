@@ -1,0 +1,3 @@
+.form-control:focus {
+    outline-color: #ff0000; /* Replace with your desired color */
+  }

@@ -1,0 +1,62 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Video Downloader</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Video Downloader</h1>-->
+<!--<form method="POST" action="{% url 'video_download' %}">-->
+<!--  {% csrf_token %}-->
+<!--  <label for="url">URL:</label>-->
+<!--  <input type="text" name="url" id="url">-->
+<!--  <label for="website">Website:</label>-->
+<!--  <select name="website" id="website">-->
+<!--    <option value="youtube">YouTube</option>-->
+<!--    <option value="facebook">Facebook</option>-->
+<!--    <option value="vimeo">Vimeo</option>-->
+
+
+<!--    &lt;!&ndash; Add more options for other supported websites &ndash;&gt;-->
+<!--  </select>-->
+<!--  <label for="format">Format:</label>-->
+<!--  <select name="format" id="format">-->
+<!--    <option value="video">Video</option>-->
+<!--    <option value="audio">Audio</option>-->
+<!--  </select>-->
+<!--  <button type="submit">Download</button>-->
+<!--</form>-->
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Downloader</title>
+</head>
+<body>
+    <h1>Video Downloader</h1>
+    <form method="POST" action="{% url 'video_download' %}">
+        {% csrf_token %}
+        <label for="url">URL:</label>
+        <input type="text" name="url" id="url">
+        <label for="website">Website:</label>
+        <select name="website" id="website">
+            <option value="youtube">YouTube</option>
+            <option value="facebook">Facebook</option>
+            <option value="vimeo">Vimeo</option>
+            <option value="instagram">Instagram</option>
+                        <option value="twitter">Twitter</option>
+                                    <option value="tiktok">Tiktok</option>
+
+
+            <!-- Add more options for other supported websites -->
+        </select>
+        <label for="format">Format:</label>
+        <select name="format" id="format">
+            <option value="video">Video</option>
+            <option value="audio">Audio</option>
+        </select>
+        <button type="submit">Download</button>
+    </form>
+</body>
+</html>
